@@ -7,8 +7,8 @@ import styles from '../styles/header.module.css'
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
-  { label: 'Contact', page: '/contact' },
-  { label: 'My Github', link: 'https://github.com/brunocvcunha' },
+  { label: 'Contact', link: 'mailto:me@brunovolpato.com' },
+  { label: 'Github', link: 'https://github.com/brunocvcunha' },
 ]
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
@@ -19,16 +19,17 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Bruno Volpato's Blog</title>
-        <meta
-          name="description"
-          content="Bruno Volpato's Personal Blog"
-        />
-        <meta name="og:title" content="Bruno Volpato's Blog" />
+        <title>{titlePre ? `${titlePre} |` : ''} Bruno Volpato</title>
+        <meta name="description" content="Bruno Volpato" />
+        <meta name="og:title" content="Bruno Volpato" />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@bruflow" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>"
+        ></link>
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (

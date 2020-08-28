@@ -6,6 +6,7 @@
 }
 
 .layout h1,
-.layout h2 {
+.layout h2,
+.layout p {
   text-align: center;
 }
