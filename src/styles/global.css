@@ -288,7 +288,15 @@ h1 {
 
 h2 {
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.02rem;
+  color: var(--accents-2);
+  border-bottom: 1px solid #ddd;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.35rem;
   letter-spacing: -0.02rem;
   color: var(--accents-3);
 }

@@ -7,6 +7,7 @@ import sharedStyles from '../../styles/shared.module.css'
 import {
   getBlogLink,
   getDateStr,
+  postIsListed,
   postIsPublished,
 } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
@@ -22,6 +23,9 @@ export async function getStaticProps({ preview }) {
       const post = postsTable[slug]
       // remove draft posts in production
       if (!preview && !postIsPublished(post)) {
+        return null
+      }
+      if (!postIsListed(post)) {
         return null
       }
       post.Authors = post.Authors || []
@@ -84,7 +88,7 @@ export default ({ posts = [], preview }) => {
                 <div className="authors">By: {post.Authors.join(' ')}</div>
               )}
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <div className="posted">{getDateStr(post.Date)}</div>
               )}
               <p>
                 {(!post.preview || post.preview.length === 0) &&

@@ -4,17 +4,23 @@ import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
-const navItems: { label: string; page?: string; link?: string }[] = [
+const navItems: {
+  label: string
+  page?: string
+  link?: string
+  slug?: string
+}[] = [
   { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
+  { label: 'Resume', page: '/blog/resume', slug: 'resume' },
   { label: 'Contact', link: 'mailto:me@brunovolpato.com' },
   { label: 'Github', link: 'https://github.com/brunocvcunha' },
 ]
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
+const ogImageUrl = '/avatar.jpg'
 
 export default ({ titlePre = '' }) => {
-  const { pathname } = useRouter()
+  const router = useRouter()
 
   return (
     <header className={styles.header}>
@@ -32,11 +38,17 @@ export default ({ titlePre = '' }) => {
         ></link>
       </Head>
       <ul>
-        {navItems.map(({ label, page, link }) => (
+        {navItems.map(({ label, page, link, slug }) => (
           <li key={label}>
             {page ? (
               <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
+                <a
+                  className={
+                    router.pathname === page || router.asPath === page
+                      ? 'active'
+                      : undefined
+                  }
+                >
                   {label}
                 </a>
               </Link>

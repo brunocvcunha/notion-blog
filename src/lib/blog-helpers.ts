@@ -14,6 +14,10 @@ export const postIsPublished = (post: any) => {
   return post.Published === 'Yes'
 }
 
+export const postIsListed = (post: any) => {
+  return post.Listed === 'Yes'
+}
+
 export const normalizeSlug = slug => {
   if (typeof slug !== 'string') return slug
 
