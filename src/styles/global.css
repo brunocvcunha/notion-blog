@@ -281,14 +281,14 @@ mark {
 
 h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
 }
 
 h2 {
   font-weight: 300;
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   letter-spacing: -0.02rem;
   color: var(--accents-2);
   border-bottom: 1px solid #ddd;
@@ -296,7 +296,7 @@ h2 {
 
 h3 {
   font-weight: 300;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   letter-spacing: -0.02rem;
   color: var(--accents-3);
 }
