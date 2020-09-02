@@ -84,7 +84,7 @@
 
 .post :global(h2),
 .post :global(h3) {
-  margin: 3rem 0 1.5rem 0;
+  margin: 2rem 0 1.5rem 0;
 }
 
 .post :global(video),
@@ -127,11 +127,11 @@
 .post {
   max-width: calc(800px + 20%);
   margin: 0 auto;
-  padding: 5%;
+  padding-left: 5%;
 }
 
 .post :global(hr) {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 .post :global(a + p) {

@@ -34,3 +34,9 @@
 .name a {
   color: inherit;
 }
+
+@media print {
+  .links {
+    visibility: hidden;
+  }
+}

@@ -48,7 +48,7 @@ export default () => (
         <a href="mailto:me@brunovolpato.com">me@brunovolpato.com</a>
       </span>
 
-      <p>
+      <p class="noprint">
         This is a statically generated,{' '}
         <ExtLink href="https://notion.so">Notion</ExtLink> powered blog.
       </p>

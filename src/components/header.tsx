@@ -25,9 +25,15 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Bruno Volpato</title>
-        <meta name="description" content="Bruno Volpato" />
-        <meta name="og:title" content="Bruno Volpato" />
+        <title>{titlePre ? `${titlePre} |` : 'Bruno Volpato'}</title>
+        <meta
+          name="description"
+          content="{titlePre ? `${titlePre} |` : 'Bruno Volpato'}"
+        />
+        <meta
+          name="og:title"
+          content="{titlePre ? `${titlePre} |` : 'Bruno Volpato'}"
+        />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@bruflow" />
         <meta name="twitter:card" content="summary_large_image" />
