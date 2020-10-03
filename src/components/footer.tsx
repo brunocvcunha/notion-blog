@@ -16,17 +16,17 @@ const contacts = [
   {
     Comp: GitHub,
     alt: 'github icon',
-    link: 'https://github.com/brunocvcunha',
+    link: 'https://github.com/bvolpato',
   },
   {
     Comp: LinkedIn,
     alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/brunocvcunha/',
+    link: 'https://www.linkedin.com/in/bvolpato/',
   },
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:me@brunovolpato.com?subject=Personal+Blog',
+    link: 'mailto:me@brunovolpato.com?subject=Blog+Contact',
   },
 ]
 
