@@ -14,7 +14,7 @@ const navItems: {
   { label: 'Blog', page: '/blog' },
   { label: 'Resume', page: '/blog/resume', slug: 'resume' },
   { label: 'Contact', link: 'mailto:me@brunovolpato.com' },
-  { label: 'Github', link: 'https://github.com/brunocvcunha' },
+  { label: 'Github', link: 'https://github.com/bvolpato' },
 ]
 
 const ogImageUrl = '/avatar.jpg'
